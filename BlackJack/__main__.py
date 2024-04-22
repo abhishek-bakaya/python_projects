@@ -1,4 +1,4 @@
-from classes import title, Deck, Player
+from classes import Deck, Player
 from functions import begin, display, end_game, replay
 
 # -------------------------------------------------------------------------------------------------
