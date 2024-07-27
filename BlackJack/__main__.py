@@ -32,16 +32,16 @@ def main():
         
         display(dealer, player, stand, game)
         player.make_bet()
-        while not stand:
 
+        while not stand:
             display(dealer, player, stand, game)
             stand = player.hit_or_stand(deck)
 
             if player.hand.value > 21:
-                player.chips.lose_bet()
-                display(dealer, player, stand, game)
-                print("\nYou busted. Dealer won.")
-                ready = replay()
+                # display(dealer, player, stand, game)
+                # player.chips.lose_bet()
+                # print("\nYou busted. Dealer won.")
+                ready = end_game(dealer, player, stand, game)
                 break
 
             if stand:
