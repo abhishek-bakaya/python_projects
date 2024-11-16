@@ -1,5 +1,5 @@
 from classes import Deck, Player
-from functions import begin, display, end_game, replay
+from functions import begin, display, end_game
 
 # -------------------------------------------------------------------------------------------------
 
@@ -38,9 +38,6 @@ def main():
             stand = player.hit_or_stand(deck)
 
             if player.hand.value > 21:
-                # display(dealer, player, stand, game)
-                # player.chips.lose_bet()
-                # print("\nYou busted. Dealer won.")
                 ready = end_game(dealer, player, stand, game)
                 break
 
